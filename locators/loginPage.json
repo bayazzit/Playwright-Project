@@ -1,0 +1,18 @@
+{  
+    "mail_box": "#email",
+    "password_box": "#password",
+    "submit_button": "#submit",
+    "add_new_contact_button": "#add-contact",
+    "error_warning": "#error",
+    "add_first_name_box": "#firstName",
+    "add_last_name_box":"#lastName",
+    "add_birthday_box":"#birthdate",
+    "add_email_box":"#email",
+    "add_phone_box":"#phone",
+    "add_address_box":"#street1",
+    "add_city_box":"#city",
+    "add_state_box":"#stateProvince",
+    "add_postal_code_box":"#postalCode",
+    "add_country_box":"#country",
+    "lastly_added_contact_name": "//tr[@class='contactTableBodyRow'][last()]/td[2]"
+}
