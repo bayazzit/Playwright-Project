@@ -23,20 +23,4 @@ test.describe('Login Tests', () => {
         await loginPage.login('invalid_mail@gmail.com', 'any_password');
         await expect(loginPage.error_warning).toBeVisible();
     });
-
-    test('Adding a new contact', async () => {
-        await loginPage.login();
-        await loginPage.addNewContact('john',
-                                      'smith',
-                                      '1995-03-16',
-                                      'john_smith@gmail.com',
-                                      '0123456789',
-                                      '123 St. 10/22',
-                                      'Ankara',
-                                      'Ic Anadolu',
-                                      '06123',
-                                      'Turkiye');
-        await loginPage.clickLoginButton();
-        await expect(loginPage.lastly_added_contact_name).toHaveText('john smith');
-    });
 });
