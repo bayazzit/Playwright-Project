@@ -32,8 +32,8 @@ test.describe('API Tests', () => {
               Authorization: `Bearer ${bearerToken}`,
             },
             data: {
-              "firstName": "John",
-              "lastName": "Doe",
+              "firstName": "john",
+              "lastName": "smith",
               "birthdate": "1970-01-01",
               "email": "jdoe@fake.com",
               "phone": "8005555555",
