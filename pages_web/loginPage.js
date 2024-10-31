@@ -1,5 +1,6 @@
 const BasePage = require('./basePage');
 const loginPageLocators = require('../locators/loginPage.json');
+const config = require('../playwright.config.js');
 
 class LoginPage extends BasePage {
     constructor(page) {
@@ -39,7 +40,7 @@ class LoginPage extends BasePage {
         //await this.page.click(this.locators.submit_button);
     }
 
-    async login(username='bayazitb95@gmail.com', password='qwe1234') {
+    async login(username=config.username, password=config.password) {
         await this.enterMail(username);
         await this.enterPassword(password);
         await this.clickLoginButton();

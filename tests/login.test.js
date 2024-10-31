@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const LoginPage = require('../pages_web/loginPage.js');
+const config = require('../playwright.config.js');
 
 test.describe('Login Tests', () => {
     let loginPage;
@@ -15,12 +16,12 @@ test.describe('Login Tests', () => {
     });
 
     test('Logging in with invalid password', async () => {
-        await loginPage.login('bayazitb95@gmail.com', 'wrong_password');
+        await loginPage.login(config.username, 'wrong password');
         await expect(loginPage.error_warning).toBeVisible();
     });
 
     test('Logging in with invalid username', async () => {
-        await loginPage.login('invalid_mail@gmail.com', 'any_password');
+        await loginPage.login('invalid_mail@gmail.com', 'any password');
         await expect(loginPage.error_warning).toBeVisible();
     });
 });

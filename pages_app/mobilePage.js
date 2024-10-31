@@ -1,5 +1,6 @@
 const { expect } = require('@playwright/test');
 const loginPageLocators = require('../locators/loginPage.json');
+const config = require('../playwright.config.js');
 
 class MobilePage {
     constructor(page) {
@@ -35,7 +36,7 @@ class MobilePage {
     await this.password_box.fill(password);
     }
 
-    async login(username='bayazitb95@gmail.com', password='qwe1234') {
+    async login(username=config.username, password=config.password) {
         await this.enterMail(username);
         await this.enterPassword(password);
         await this.submit_button.click();
