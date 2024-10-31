@@ -1,12 +1,13 @@
 const { request } = require('@playwright/test');
+const config = require('../playwright.config.js');
 
 async function getToken() {
   const apiRequest = await request.newContext();
 
   const response = await apiRequest.post('https://thinking-tester-contact-list.herokuapp.com/users/login', {
     data: {
-      'email': 'bayazitb95@gmail.com',
-      'password': 'qwe1234',
+      'email': config.username,
+      'password': config.password,
     },
   });
 
